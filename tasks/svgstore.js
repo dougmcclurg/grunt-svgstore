@@ -26,11 +26,12 @@ module.exports = function(grunt) {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       prefix : '',
-      svg : { }
+      svg : { },
+      display : 'none'
     });
 
     this.files.forEach(function(f) {
-      var $resultDocument = cheerio.load('<svg><defs></defs></svg>'),
+      var $resultDocument = cheerio.load('<svg style="display: ' + options.display + '"><defs></defs></svg>'),
           $resultSvg  = $resultDocument('svg'),
           $resultDefs = $resultDocument('defs').first();
 

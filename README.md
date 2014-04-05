@@ -43,6 +43,13 @@ grunt.initConfig({
 
 ### Options
 
+#### options.display
+Type: `String`
+Default value: `none`
+
+A string value that sets display properties of the definitions file, can take the css properties block, none, inline or inline-block.
+
+
 #### options.prefix
 Type: `String`
 Default value: `''`

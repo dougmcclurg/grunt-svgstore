@@ -57,5 +57,15 @@ exports.svgstore = {
     test.equal(actual, expected, 'should add svg attributes');
 
     test.done();
+  },
+
+  with_display: function(test){
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/display.svg');
+    var expected = grunt.file.read('test/expected/display');
+    test.equal(actual, expected, 'should add display properties');
+
+    test.done();
   }
 };

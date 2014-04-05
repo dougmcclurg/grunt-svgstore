@@ -38,6 +38,15 @@ module.exports = function(grunt) {
         },
       },
 
+      display: {
+        options:{
+          display: 'none'
+        },
+        files: {
+          'tmp/display.svg': ['test/fixtures/codepen.svg']
+        }
+      },
+
       prefix: {
         options:{
           prefix: 'icon-'
